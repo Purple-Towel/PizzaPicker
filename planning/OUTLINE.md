@@ -9,9 +9,3 @@
 - As a **customer**, I shouldn't be able to see **other peoples' orders**, because **they are not mine**.
 - As **the restaurant**, I should **recieve orders via sms**, because **customer is ordering**.
 
-
-
-### ERD
-A table of orders:
-an order has an order_id
-an associated phone_number
