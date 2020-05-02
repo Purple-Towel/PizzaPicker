@@ -60,7 +60,7 @@ app.get("/cart", (req, res) => {
 });
 
 app.get("/past-orders", (req, res) => {
-  res.render("past-orders");
+  res.render("past_orders");
 });
 
 app.listen(PORT, () => {
