@@ -8,4 +8,3 @@
 - As a **customer**, I want to see my **orders**, because I want to know the update on the **webpage and sms**.
 - As a **customer**, I shouldn't be able to see **other peoples' orders**, because **they are not mine**.
 - As **the restaurant**, I should **recieve orders via sms**, because **customer is ordering**.
-
