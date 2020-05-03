@@ -1,0 +1,44 @@
+
+  div.about {
+    padding:0px 72px;
+
+    img.Rocket {
+    display: block;
+    width: 240px;
+    margin-top: 50px;
+    }
+
+    p {
+      width: 290px;
+      color: #798da3;
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+
+    a.order-button {
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 10px 45px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5%;
+      margin-left: 40px;
+      font-weight: 700;
+    }
+
+    img.Cube {
+      width: 325px;
+      float: right;
+      position: relative;
+      bottom: 320px;
+      margin-right: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .breaker {
+    border: 2px solid #e61610;
+    width: 100%;
+    margin: 100px 0px;
+  }

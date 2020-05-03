@@ -1,0 +1,36 @@
+nav {
+  background-color: #c4d0dd;
+  height: 70px;
+  padding: 0px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a img {
+    height: 100px;
+  }
+
+  .page-links {
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: black;
+      padding: 0px 24px;
+      font-size: 16px;
+
+    }
+
+    .login-btn {
+      background-color: black;
+      color: white;
+      padding: 10px 30px;
+      margin-left: 15px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 5%;
+    }
+  }
+}
+
+

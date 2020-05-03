@@ -51,6 +51,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get('/login/:id', (req, res) => {
+  req.session.user_id = req.params.id;
+  res.redirect('/');
+});
+
 app.get("/menu", (req, res) => {
   res.render("menu");
 
@@ -62,6 +67,7 @@ app.get("/cart", (req, res) => {
 app.get("/past-orders", (req, res) => {
   res.render("past_orders");
 });
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
