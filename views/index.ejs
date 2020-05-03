@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title>Pizza Planet</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/index.css" type="text/css" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+
   </head>
 
   <body>
-    <h1>Landing Page!</h1>
+
+    <%- include('partials/_header') %>
+
+    <h1></h1>
+    <div class="about">
+      <div>
+        <img class="Rocket" src="/images/PizzaPlanetRocket.png">
+        <p>
+          We sell pizza. You want to buy pizza. Buy our pizza. We will text you when your pizza is done.
+        </p>
+        <a class="order-button" href="/menu">ORDER NOW</a>
+      </div>
+      <img class="Cube"  src="/images/PizzaCube.gif">
+    </div>
+
+    <div class="breaker"></div>
+
+    <main class="container">
+      <div class="rows">
+        <div class ="col-1">
+          <div class ="col-1-icon">
+            <img class="Ethical"  src="/images/ethical.png">
+            <div class="col-1-title">
+              <h3 class="text-gray-dark"> 100% Ethical Pizza</h3>
+            </div>
+            <div class ="col-1-desc">
+              <p>Our pizza is farm grown and free-range. Unlike our competitor's pizzas that are fermented in laboratory vats and cloned from human DNA we make pizza the traditional way.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class ="col-2">
+          <img class="Ethical"  src="/images/ethical.png">
+          <div class="col-1-title">
+            <h3 class="text-gray-dark"> 24/7 Service</h3>
+          </div>
+          <div class ="col-1-desc">
+            <p>Our robots will cook your pizza to order, at any time of day or day of the week, or even point in space. We have 1 location that due to geospatial and temporal paradoxes, is omnipresent across both space and time.</p>
+          </div>
+        </div>
+
+        <div class = "col-3">
+          <img class="Ethical"  src="/images/24-7.png">
+          <div class="col-1-title">
+            <h3 class="text-gray-dark"> Our Pizza Does Not Contain Pineapple</h3>
+          </div>
+          <div class ="col-1-desc">
+            <p>Pineapple is a terrible topping and does not belong on pizza.
+            If any current employee of Pizza-Picker Pizza recommends pineapple as a topping, please report them to HR, as they have been replaced by an evil clone.</p>
+        </div>
+      </div>
+    </div>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/login.js"></script>
   </body>
 </html>
