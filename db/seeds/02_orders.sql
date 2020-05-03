@@ -3,4 +3,4 @@ VALUES
 (1, NULL, 30);
 /*Only one test order with one user for demo*/
 
-UPDATE orders SET ordered_at = NOW()
+-- UPDATE orders SET ordered_at = NOW();
