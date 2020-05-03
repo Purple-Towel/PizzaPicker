@@ -1,111 +1,52 @@
 /* ------------------------- PIZZAS -------------------------*/
-/*Pepperoni Pizza*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
+
+INSERT INTO dishes (name, image_url, description, base_price, is_side_dish)
 
 VALUES
-('Pepperoni Pizza', 'IMG', 'DESC', '800', 's', 'thin', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1000', 'm', 'thin', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1200', 'l', 'thin', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '800', 's', 'regular', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1000', 'm', 'regular', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1200', 'l', 'regular', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1200', 's', 'stuffed', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1400', 'm', 'stuffed', false),
-('Pepperoni Pizza', 'IMG', 'DESC', '1800', 'l', 'stuffed', false);
 
+('Papa-Ronnie Pizza', 'IMG', 'DESC', 1000, false),
+('Pizza Cube', 'IMG', 'DESC', 10000, false),
+('Pineapple Pizza', 'IMG', 'DESC', 2147483647, false),
+('Asbestos Pizza, now with Fibreglass', 'IMG', 'DESC', 8100, false);
 
-/*Cheese Pizza*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
+INSERT INTO options (size, crust, price, dish_id)
 
 VALUES
-('Cheese Pizza', 'IMG', 'DESC', '800', 's', 'thin', false),
-('Cheese Pizza', 'IMG', 'DESC', '1000', 'm', 'thin', false),
-('Cheese Pizza', 'IMG', 'DESC', '1200', 'l', 'thin', false),
-('Cheese Pizza', 'IMG', 'DESC', '800', 's', 'regular', false),
-('Cheese Pizza', 'IMG', 'DESC', '1000', 'm', 'regular', false),
-('Cheese Pizza', 'IMG', 'DESC', '1200', 'l', 'regular', false),
-('Cheese Pizza', 'IMG', 'DESC', '1200', 's', 'stuffed', false),
-('Cheese Pizza', 'IMG', 'DESC', '1400', 'm', 'stuffed', false),
-('Cheese Pizza', 'IMG', 'DESC', '1800', 'l', 'stuffed', false);
 
-/*Carnivore Pizza*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
+('s', 'thin', 250, 1),
+('m', 'thin', 2500, 1),
+('l', 'thin', 25000, 1),
+('s', 'regular', 50, 1),
+('m', 'regular', 100, 1),
+('l', 'regular', 150, 1),
+('s', 'thin', 250, 2),
+('m', 'thin', 2500, 2),
+('l', 'thin', 25000, 2),
+('s', 'regular', 50, 2),
+('m', 'regular', 100, 2),
+('l', 'regular', 150, 2),
+('s', 'thin', -250, 3),
+('m', 'thin', -2500, 3),
+('l', 'thin', -25000, 3),
+('s', 'regular', -50, 3),
+('m', 'regular', -100, 3),
+('l', 'regular', -150, 3),
+('s', 'thin', 250, 4),
+('m', 'thin', 2500, 4),
+('l', 'thin', 25000, 4),
+('s', 'regular', 50, 4),
+('m', 'regular', 100, 4),
+('l', 'regular', 150, 4);
 
-VALUES
-('Carnivore Pizza', 'IMG', 'DESC', '1000', 's', 'thin', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1200', 'm', 'thin', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1400', 'l', 'thin', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1000', 's', 'regular', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1200', 'm', 'regular', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1400', 'l', 'regular', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1400', 's', 'stuffed', false),
-('Carnivore Pizza', 'IMG', 'DESC', '1600', 'm', 'stuffed', false),
-('Carnivore Pizza', 'IMG', 'DESC', '2000', 'l', 'stuffed', false);
 
-/*PINEAPPLE ON PIZZA :)*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
 
-VALUES
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1000', 's', 'thin', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1200', 'm', 'thin', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1400', 'l', 'thin', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1000', 's', 'regular', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1200', 'm', 'regular', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1400', 'l', 'regular', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1400', 's', 'stuffed', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '1600', 'm', 'stuffed', false),
-('PINEAPPLE ON PIZZA :)', 'IMG', 'DESC', '2000', 'l', 'stuffed', false);
 
-/*Vegan Pizza*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
+-- /* ------------------------- SIDE DISHES -------------------------*/
+
+INSERT INTO dishes (name, image_url, description, base_price, is_side_dish)
 
 VALUES
-('Vegan Pizza :)', 'IMG', 'DESC', '1000', 's', 'thin', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1200', 'm', 'thin', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1400', 'l', 'thin', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1000', 's', 'regular', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1200', 'm', 'regular', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1400', 'l', 'regular', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1400', 's', 'stuffed', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '1600', 'm', 'stuffed', false),
-('Vegan Pizza :)', 'IMG', 'DESC', '2000', 'l', 'stuffed', false);
 
-/*Supreme Supreme Pizza*/
-INSERT INTO dishes (name, image_url, description, price, size, crust, is_side_dish)
-
-VALUES
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2000', 's', 'thin', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2400', 'm', 'thin', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '1800', 'l', 'thin', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2000', 's', 'regular', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2400', 'm', 'regular', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2800', 'l', 'regular', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '2800', 's', 'stuffed', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '3200', 'm', 'stuffed', false),
-('Supreme Supreme Pizza', 'IMG', 'DESC', '4000', 'l', 'stuffed', false);
-
-/* ------------------------- SIDE DISHES -------------------------*/
-
-INSERT INTO dishes (name, image_url, description, price, size, is_side_dish)
-
-/*WINGS*/
-VALUES
-('Chicken Wings', 'IMG', 'DESC', '900', 's', true),
-('Chicken Wings', 'IMG', 'DESC', '1400', 'm', true),
-('Chicken Wings', 'IMG', 'DESC', '2200', 'l', true);
-
-/*Garlic Bread Sticks*/
-INSERT INTO dishes (name, image_url, description, price, size, is_side_dish)
-
-VALUES
-('Garlic Bread Sticks', 'IMG', 'DESC', '300', 's', true),
-('Garlic Bread Sticks', 'IMG', 'DESC', '500', 'm', true),
-('Garlic Bread Sticks', 'IMG', 'DESC', '700', 'l', true);
-
-/*Fries*/
-INSERT INTO dishes (name, image_url, description, price, size, is_side_dish)
-
-VALUES
-('Fries', 'IMG', 'DESC', '100', 's', true),
-('Fries', 'IMG', 'DESC', '150', 'm', true),
-('Fries', 'IMG', 'DESC', '200', 'l', true);
+('Pegasus Wings', 'IMG', 'DES', 2200, true),
+('Cheese Wheel', 'IMG', 'DES', 2250, true),
+('Garlic with Hot Sauce', 'IMG', 'DES', 2500, true);
