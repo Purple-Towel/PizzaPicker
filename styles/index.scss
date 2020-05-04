@@ -4,15 +4,16 @@
 
     img.Rocket {
     display: block;
-    width: 240px;
-    margin-top: 50px;
+    width: 200px;
+    margin: 60px 0px;
+    filter: drop-shadow(5px 5px 5px black)
     }
 
     p {
-      width: 290px;
+      width: 300px;
       color: #798da3;
       font-size: 16px;
-      padding-bottom: 15px;
+      padding-bottom: 30px;
     }
 
     a.order-button {
@@ -23,7 +24,6 @@
       cursor: pointer;
       font-size: 14px;
       border-radius: 5%;
-      margin-left: 40px;
       font-weight: 700;
     }
 
@@ -34,7 +34,6 @@
       bottom: 320px;
       margin-right: 50px;
       border-radius: 50%;
-      box-shadow: 10px 10px 10px black;
     }
   }
 
@@ -54,7 +53,6 @@
 
   article {
     width: 200px;
-    margin: 0 auto;
   }
   h3 {
     margin-top: 10px;

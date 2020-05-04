@@ -8,6 +8,7 @@ nav {
 
   .papa-john {
     font-size: 14px;
+    display: none;
   }
 
   a img {
@@ -27,16 +28,16 @@ nav {
     .login-btn, .logout-btn {
       background-color: black;
       color: white;
-      padding: 10px 30px;
+      padding: 7px 35px;
       margin-left: 15px;
       cursor: pointer;
       font-size: 12px;
       border-radius: 5%;
-
     }
 
-    .logout-btn, .papa-john {
+    .logout-btn {
       display: none;
+      padding: 7px 29px;
     }
   }
 }
