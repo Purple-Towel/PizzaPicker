@@ -27,6 +27,12 @@ h2 {
     font-weight: 700;
   }
 
+  a.order-button:hover {
+    background-color: #c4d0dd;
+    color: #e61610;
+    border-color: black;
+  }
+
   .pizza, .sides {
     display: flex;
     justify-content: space-between;

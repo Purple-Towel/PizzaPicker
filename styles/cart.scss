@@ -8,14 +8,31 @@ h2 {
 #cart {
   padding: 0px 72px;
 
-  th {
-    color: #798da3;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: left;
+  table {
+    width: 100%;
+
+
+    th {
+      color: #798da3;
+      font-weight: 400;
+      font-size: 12px;
+      text-align: left;
+    }
   }
 
-  tr {
-    padding: 40px 0px;
-  }
+  a.checkout-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 10px 45px;
+      border: 1px groove #e61610;
+      border-radius: 5%;
+      margin: 30px 0px 60px 358px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+    }
 }
+
+
