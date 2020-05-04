@@ -1,0 +1,80 @@
+
+  div.about {
+    padding:0px 72px;
+
+    img.Rocket {
+    display: block;
+    width: 240px;
+    margin-top: 50px;
+    }
+
+    p {
+      width: 290px;
+      color: #798da3;
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+
+    a.order-button {
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 10px 45px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5%;
+      margin-left: 40px;
+      font-weight: 700;
+    }
+
+    img.Cube {
+      width: 325px;
+      float: right;
+      position: relative;
+      bottom: 320px;
+      margin-right: 50px;
+      border-radius: 50%;
+      box-shadow: 10px 10px 10px black;
+    }
+  }
+
+  .breaker {
+    border: 2px solid #e61610;
+    width: 100%;
+    margin: 120px 0px;
+  }
+
+.container {
+  width: 100%;
+  padding: 0px 72px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 120px;
+
+  article {
+    width: 200px;
+    margin: 0 auto;
+  }
+  h3 {
+    margin-top: 10px;
+  }
+
+  h3.Ethical {
+    margin-left: 14px;
+  }
+  h3.hours {
+    margin-left: 44px;
+  }
+  h3.Pineapple {
+    margin-left: 39px;
+  }
+  img {
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
