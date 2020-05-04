@@ -1,6 +1,8 @@
 h2 {
   font-family: 'Aclonica', sans-serif;
   padding: 40px 72px;
+  color: #e61610;
+  font-size: 30px;
 }
 
 #menu {
@@ -8,6 +10,21 @@ h2 {
 
   h3 {
     font-family: 'Aclonica', sans-serif;
+    font-size: 24px;
+  }
+
+  a.order-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: 1px groove #e61610;
+    border-radius: 5%;
+    margin: 30px 0px 60px 350px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
   }
 
   .pizza, .sides {
@@ -17,13 +34,17 @@ h2 {
   }
 
   .dish {
-    width: 240px;
-    margin-bottom: 40px;
+    width: 246px;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    margin-bottom: 40px;
+    border: 3px outset #e61610;
+    box-shadow: 2px 4px 8px black;
 
     .dish-image {
       width: 240px;
       height: 240px;
+      background-color: black;
     }
 
     .dish-info {
@@ -37,23 +58,30 @@ h2 {
         font-weight: 300;
         font-size: 14px;
         height: 50px;
-        color: #798da3
+        color: #798da3;
       }
 
       label, select {
         font-size: 12px;
-        width: 77px;
+        width: 75px;
       }
 
       btn {
         background-color: black;
         color: white;
         display: inline-block;
-        padding: 7px 35px;
+        padding: 3px 20px;
+        border: 1px solid black;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 700;
         border-radius: 5%;
+        margin: 20px 0px 15px 53px;
+      }
+
+      btn:hover {
+        background-color: #c4d0dd;
+        color: black;
       }
     }
   }
