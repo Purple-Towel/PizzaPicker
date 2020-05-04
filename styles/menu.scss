@@ -1,0 +1,62 @@
+h2 {
+  font-family: 'Aclonica', sans-serif;
+  padding: 40px 72px;
+}
+
+#menu {
+  padding: 0px 72px;
+
+  h3 {
+    font-family: 'Aclonica', sans-serif;
+  }
+
+  .pizza, .sides {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .dish {
+    width: 240px;
+    margin-bottom: 40px;
+    background-color: white;
+
+    .dish-image {
+      width: 240px;
+      height: 240px;
+    }
+
+    .dish-info {
+      padding: 10px;
+
+      h4 {
+        font-weight: 600;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        height: 50px;
+        color: #798da3
+      }
+
+      label, select {
+        font-size: 12px;
+        width: 77px;
+      }
+
+      btn {
+        background-color: black;
+        color: white;
+        display: inline-block;
+        padding: 7px 35px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 5%;
+      }
+    }
+  }
+}
+
+
