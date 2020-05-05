@@ -1,9 +1,19 @@
 $(() => {
   $('.login-btn').on('click', () => {
-    $.get('/login');
+    // $('.login-btn').hide();
+    // $('.logout-btn').show();
+    // $('.papa-john').slideDown();
+    $.get('/login', () => {
+      location.reload();
+    });
   });
 
   $('.logout-btn').on('click', () => {
-    $.get('/logout');
+    // $('.login-btn').show();
+    // $('.logout-btn').hide();
+    // $('.papa-john').slideUp();
+    $.get('/logout', () => {
+      location.reload();
+    });
   });
 });

@@ -20,8 +20,12 @@
 
     <%- include('partials/_header') %>
 
-    <h1>User id = <%= userID %></h1>
+
+
     <div class="about">
+      <% if (userID) { %>
+        <span class="user-name">Logged in as: <em><%= user.name %></em></span>
+      <% } %>
       <div>
         <img class="Rocket" src="/images/PizzaPlanetRocket.png">
         <p>

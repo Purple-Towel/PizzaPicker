@@ -33,8 +33,8 @@ app.use("/styles", sass({
 }));
 app.use(express.static("public"));
 app.use(cookieSession({
-  name: 'session',
-  keys: ['key1', 'key2'],
+  name: 'user_id',
+  keys: ['key1'],
 }));
 
 // Separated Routes for each Resource
@@ -59,7 +59,18 @@ app.use("/cart", cartRoutes(db));
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
   const userID = req.session.user_id;
-  res.render("index", { userID });
+  let query = `SELECT name FROM users
+    WHERE id = 1`;
+    db.query(query)
+      .then(data => {
+        const user = data.rows[0];
+        res.render("index", { userID, user });
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
 });
 
 app.listen(PORT, () => {

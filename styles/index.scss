@@ -2,6 +2,10 @@
   div.about {
     padding:0px 72px;
 
+    .user-name {
+      font-size: 14px;
+    }
+
     img.Rocket {
     display: block;
     width: 200px;
@@ -45,8 +49,8 @@
 
   .breaker {
     border: 2px solid #e61610;
-    width: 100%;
-    margin: 120px 0px;
+    width: 90%;
+    margin: 120px auto;
   }
 
 .container {
