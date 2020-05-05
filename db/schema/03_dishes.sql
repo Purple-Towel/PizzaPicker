@@ -7,7 +7,7 @@ CREATE TABLE dishes (
   image_url VARCHAR(255) NOT NULL,
   description TEXT,
   base_price INTEGER NOT NULL,
-  is_side_dish BOOLEAN NOT NULL
+  has_options BOOLEAN NOT NULL
 );
 
 CREATE TABLE options (
