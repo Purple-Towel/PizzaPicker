@@ -3,7 +3,7 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get('/', (req, res) => {
-    let query = `SELECT id, name FROM users
+    let query = `SELECT id FROM users
     WHERE id = 1`;
     db.query(query)
       .then(data => {

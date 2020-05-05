@@ -3,17 +3,13 @@
       <a href="/">
         <img src="/images/PizzaPlanetLogo.png">
       </a>
-      <% if (userID) { %>
-        <p class="papa-john">Logged in as: Papa John</p>
-      <% } %>
-
     <div class="page-links">
       <a id="menu-link" href="/menu">Menu</a>
       <a id="cart-link" href="/cart">Cart</a>
-      <% if (userID === undefined) { %>
-        <btn type="submit" class="login-btn">LOG IN</btn>
-      <% } else if (userID){ %>
+      <% if (userID) { %>
         <btn type="submit" class="logout-btn">LOG OUT</btn>
+      <% } else { %>
+        <btn type="submit" class="login-btn">LOG IN</btn>
       <% } %>
     </div>
   </nav>
