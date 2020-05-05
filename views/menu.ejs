@@ -34,7 +34,7 @@
               <div class="dish-info">
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
-                <form id="add-pizza">
+                <form action="/cart" method="POST" id="add-pizza">
                   <label for="pizza-size">Size</label>
                   <select form="add-pizza" id="pizza-size">
                     <option value="s">Small</option>
@@ -46,7 +46,7 @@
                     <option value="thin">Thin</option>
                     <option value="regular">Regular</option>
                   </select>
-                  <btn type="submit">ADD TO CART</btn>
+                  <btn class="add-to-cart" type="submit">ADD TO CART</btn>
                 </form>
               </div>
             </article>
@@ -66,8 +66,8 @@
               <div class="dish-info">
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
-                <form id="add-side">
-                  <btn type="submit">ADD TO CART</btn>
+                <form action="/cart" method="POST" id="add-side">
+                  <btn class="add-to-cart" type="submit">ADD TO CART</btn>
                 </form>
               </div>
             </article>
@@ -84,6 +84,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/login-logout.js"></script>
+    <script type="text/javascript" src="/scripts/add-to-cart.js"></script>
   </body>
 </html>
