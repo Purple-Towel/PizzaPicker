@@ -29,6 +29,7 @@
             <th>PRODUCT</th>
             <th>PRICE</th>
             <th>QUANTITY</th>
+            <!-- <th>REMOVE</th> -->
             <th>TOTAL</th>
           </tr>
         </thead>
@@ -51,9 +52,29 @@
             <td><input type="number" value="1" min="1"></td>
             <td>$6</td>
           </tr>
-
         </tbody>
       </table>
+
+      <aside>
+        <div class="order-sum">
+          <h4>Order Summary</h4>
+          <section class="subtotal">
+            <div class="left">
+              <p>Subtotal</p>
+              <p>Delivery</p>
+            </div>
+            <div class="right">
+              <p>$65</p>
+              <p>$4.99</p>
+            </div>
+          </section>
+          <div class="total">
+            <p>Total</p>
+            <p>$69.99</p>
+          </div>
+        </div>
+        <a class="checkout-button" href="/cart">CHECKOUT</a>
+      </aside>
 
   </main>
     <%- include('partials/_footer') %>
@@ -62,6 +83,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/login-logout.js"></script>
   </body>
 </html>

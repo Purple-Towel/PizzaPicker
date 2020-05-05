@@ -25,6 +25,12 @@
       font-size: 14px;
       border-radius: 5%;
       font-weight: 700;
+      border: 1px solid black;
+    }
+
+    a.order-button:hover {
+      background-color: #c4d0dd;
+      color: #e61610;
     }
 
     img.Cube {
@@ -54,23 +60,28 @@
   article {
     width: 200px;
   }
-  h3 {
+  h4 {
     margin-top: 10px;
   }
 
-  h3.Ethical {
+  h4.Ethical {
     margin-left: 14px;
   }
-  h3.hours {
+  h4.hours {
     margin-left: 44px;
   }
-  h3.Pineapple {
-    margin-left: 39px;
+  h4.Pineapple {
+    margin-left: 38px;
   }
   img {
     height: 100px;
     display: block;
     margin: 0 auto;
+  }
+
+  .col-1-desc p {
+    color: #798da3;
+    font-size: 14px;
   }
 }
 

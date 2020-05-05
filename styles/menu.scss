@@ -27,6 +27,13 @@ h2 {
     font-weight: 700;
   }
 
+  a.order-button:hover {
+    background-color: #c4d0dd;
+    color: #e61610;
+    border-color: black;
+    font-weight: 900;
+  }
+
   .pizza, .sides {
     display: flex;
     justify-content: space-between;
@@ -34,11 +41,11 @@ h2 {
   }
 
   .dish {
-    width: 246px;
+    width: 244px;
     background-color: white;
     background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
     margin-bottom: 40px;
-    border: 3px outset #e61610;
+    border: 2px outset #e61610;
     box-shadow: 2px 4px 8px black;
 
     .dish-image {
@@ -87,4 +94,8 @@ h2 {
   }
 }
 
+#menu-link {
+  text-decoration: underline;
+  color: #e61610;
+}
 
