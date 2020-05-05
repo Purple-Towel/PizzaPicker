@@ -3,7 +3,8 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    res.render('cart');
+    const userID = req.session.user_id;
+    res.render('cart', { userID });
   });
   return router;
 };

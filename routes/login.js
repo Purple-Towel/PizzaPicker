@@ -8,11 +8,14 @@ module.exports = (db) => {
     db.query(query)
       .then(data => {
         const user = data.rows[0];
-        console.log(user);
         req.session.user_id = user.id;
-        res.redirect('/', { user });
+        res.redirect('/');
       })
-      .catch(err => { throw err });
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
   });
   return router;
 }
