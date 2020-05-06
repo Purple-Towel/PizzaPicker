@@ -7,7 +7,7 @@ const calvin = process.env.Calvin
 const client = require('twilio')(accountSid, authToken);
 
 //function called on click
-function sendmessagetoRestaurant() {
+function smstoRestaurant() {
   return client.messages
     .create({
     body: `TO RESTAURANT: Order has been placed`,
@@ -16,4 +16,4 @@ function sendmessagetoRestaurant() {
   })
 }
 
-module.exports = { sendmessagetoRestaurant };
+module.exports = { smstoRestaurant };

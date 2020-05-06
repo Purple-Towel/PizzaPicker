@@ -11,3 +11,19 @@ $('.checkout-button').on('click', function() {
       .slideDown();
   }
 });
+
+
+$('.checkout-button').on('click', function(event) {
+  event.preventDefault();
+  if ($('.logout-btn').is(':visible')) {
+    $.post('/cart/smstoRestaurant', {}, () => {})
+  }
+});
+
+$('.checkout-button').on('click', function(event) {
+  event.preventDefault();
+  if ($('.logout-btn').is(':visible')) {
+    $.post('/cart/smstoClient', {}, () => {})
+  }
+});
+
