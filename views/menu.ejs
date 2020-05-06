@@ -34,19 +34,23 @@
               <div class="dish-info">
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
-                <form action="/cart" method="POST" id="add-pizza">
-                  <label for="pizza-size">Size</label>
-                  <select form="add-pizza" id="pizza-size">
+                <form class="add-pizza">
+
+                  <input type='hidden' name='pizzaId' value="<%= item.id %>" >
+                  <input type='hidden' name='pizzaName' value="<%= item.name %>" >
+
+                  <label for="pizzaSize">Size</label>
+                  <select name="pizzaSize">
                     <option value="s">Small</option>
                     <option value="m">Medium</option>
                     <option value="l">Large</option>
                   </select>
                   <label for="pizza-crust">Crust</label>
-                  <select form="add-pizza" id="pizza-crust">
+                  <select name="pizzaCrust">
                     <option value="thin">Thin</option>
                     <option value="regular">Regular</option>
                   </select>
-                  <btn class="add-to-cart" type="submit">ADD TO CART</btn>
+                  <button class="add-to-cart" type="submit">ADD TO CART</button>
                 </form>
               </div>
             </article>
@@ -66,7 +70,7 @@
               <div class="dish-info">
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
-                <form action="/cart" method="POST" id="add-side">
+                <form class="add-side">
                   <btn class="add-to-cart" type="submit">ADD TO CART</btn>
                 </form>
               </div>
