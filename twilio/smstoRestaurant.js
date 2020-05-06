@@ -16,5 +16,4 @@ function sendmessagetoRestaurant() {
   })
 }
 
-sendmessagetoRestaurant()
 module.exports = { sendmessagetoRestaurant };

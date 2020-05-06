@@ -1,5 +1,7 @@
 const express = require('express');
 const router  = express.Router();
+// const { smstoClient } = require('../twilio/smstoClient')
+// const { smstoRestaurant } = require('../twilio/smstoRestaurant')
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
@@ -8,3 +10,19 @@ module.exports = (db) => {
   });
   return router;
 };
+
+
+// router.post('/sendmessage', (req, res) => {
+//   smstoRestaurant(req)
+//     .then (() => {
+//         res.redirect('/');
+//     })
+// });
+
+// //add delay
+// router.post('/sendmessage', (req, res) => {
+//   smstoClient(req)
+//     .then (() => {
+//         res.redirect('/');
+//     })
+// });
