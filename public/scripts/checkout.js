@@ -26,3 +26,4 @@ $('.checkout-button').on('click', function(event) {
     $.post('/cart/smstoClient', {}, () => {})
   }
 });
+
