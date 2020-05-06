@@ -7,7 +7,7 @@ const calvin = process.env.Calvin
 const client = require('twilio')(accountSid, authToken);
 
 //function called on timeout delay
-function sendmessagetoCustomer() {
+function smstoClient() {
   return client.messages
     .create({
     body: `Hi ${calvin},
@@ -19,4 +19,4 @@ function sendmessagetoCustomer() {
 }
 
 
-module.exports = { sendmessagetoCustomer };
+module.exports = { smstoClient };

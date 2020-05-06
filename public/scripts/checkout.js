@@ -3,11 +3,26 @@ $('.checkout-button').on('click', function() {
     $('.checkout-msg')
       .text('Your order has been placed. Thank you for choosing Pizza Planet!')
       .addClass('checkout-success')
-      .slideDown();
+      .slideDown()
   } else {
     $('.checkout-msg')
       .text('Please login to process order.')
       .addClass('checkout-error')
       .slideDown();
+  }
+});
+
+
+$('.checkout-button').on('click', function(event) {
+  event.preventDefault();
+  if ($('.logout-btn').is(':visible')) {
+    $.post('/cart/smstoRestaurant', {}, () => {})
+  }
+});
+
+$('.checkout-button').on('click', function(event) {
+  event.preventDefault();
+  if ($('.logout-btn').is(':visible')) {
+    $.post('/cart/smstoClient', {}, () => {})
   }
 });
