@@ -6,14 +6,5 @@ CREATE TABLE dishes (
   name VARCHAR(255) NOT NULL,
   image_url VARCHAR(255) NOT NULL,
   description TEXT,
-  base_price INTEGER NOT NULL,
-  has_options BOOLEAN NOT NULL
-);
-
-CREATE TABLE options (
-  id SERIAL PRIMARY KEY NOT NULL,
-  size VARCHAR(1) NOT NULL,
-  crust VARCHAR(255),
-  price INTEGER NOT NULL,
-  dish_id INTEGER NOT NULL REFERENCES dishes(id) ON DELETE CASCADE
+  base_price INTEGER NOT NULL
 );
