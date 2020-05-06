@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 
 //function called on timeout delay
 function sendmessagetoCustomer() {
-client.messages
+  return client.messages
     .create({
     body: `Hi ${calvin},
     Thanks for ordering with Pizza Planet.
@@ -18,6 +18,5 @@ client.messages
   })
 }
 
-sendmessagetoCustomer()
 
 module.exports = { sendmessagetoCustomer };
