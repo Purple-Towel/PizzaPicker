@@ -22,11 +22,10 @@
     <h2>Order with us</h2>
 
     <main id="menu">
-      <h3>PIZZAS</h3>
+      <h3>DISHES</h3>
       <section class="pizza">
-        <!-- APPEND PIZZA DISHES -->
+        <!-- APPEND DISHES -->
         <% for (let item of menuItems) { %>
-          <% if (!item.is_side_dish) { %>
             <article class="dish">
               <div>
                 <img class="dish-image" src="<%= item.image_url %>">
@@ -35,47 +34,10 @@
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
                 <form class="add-pizza">
-
-                  <input type='hidden' name='pizzaId' value="<%= item.id %>" >
-                  <input type='hidden' name='pizzaName' value="<%= item.name %>" >
-
-                  <label for="pizzaSize">Size</label>
-                  <select name="pizzaSize">
-                    <option value="s">Small</option>
-                    <option value="m">Medium</option>
-                    <option value="l">Large</option>
-                  </select>
-                  <label for="pizza-crust">Crust</label>
-                  <select name="pizzaCrust">
-                    <option value="thin">Thin</option>
-                    <option value="regular">Regular</option>
-                  </select>
                   <button class="add-to-cart" type="submit">ADD TO CART</button>
                 </form>
               </div>
             </article>
-          <% } %>
-        <% } %>
-      </section>
-
-      <h3>SIDES</h3>
-      <section class="sides">
-        <!-- APPEND SIDE DISHES -->
-        <% for (let item of menuItems) { %>
-          <% if (item.is_side_dish) { %>
-            <article class="dish">
-              <div>
-                <img class="dish-image" src="<%= item.image_url %>">
-              </div>
-              <div class="dish-info">
-                <h4><%= item.name %></h4>
-                <p><%= item.description %></p>
-                <form class="add-side">
-                  <btn class="add-to-cart" type="submit">ADD TO CART</btn>
-                </form>
-              </div>
-            </article>
-          <% } %>
         <% } %>
       </section>
 
