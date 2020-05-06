@@ -9,6 +9,7 @@ h2 {
   padding: 0px 72px;
   display: flex;
   justify-content: space-between;
+  height: 400px;
 
   table {
     width: 65%;
@@ -72,12 +73,12 @@ h2 {
       text-decoration: none;
       background-color: black;
       color: white;
-      padding: 10px 37%;
+      padding: 10px 33%;
       border: 1px solid #e61610;
       cursor: pointer;
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     .checkout-button:hover {
@@ -86,6 +87,23 @@ h2 {
       border-color: black;
       font-weight: 900;
     }
+
+    .checkout-msg {
+      display: none;
+      padding: 10px 25px;
+      border: 2px solid;
+      font-size: 14px;
+    }
+
+    .checkout-success {
+      border-color: #4BB543;
+      color: #4BB543;
+    }
+
+    .checkout-error {
+      border-color: #e61610;
+      color: #e61610;
+    }
   }
 }
 
@@ -93,5 +111,6 @@ h2 {
   text-decoration: underline;
   color: #e61610;
 }
+
 
 
