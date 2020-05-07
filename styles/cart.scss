@@ -1,15 +1,20 @@
-h2 {
+.cart-title {
   font-family: 'Aclonica', sans-serif;
   padding: 40px 72px;
   color: #e61610;
   font-size: 30px;
+  display: none;
+}
+
+.cart-slidedown {
+  display: none;
 }
 
 #cart {
   padding: 0px 72px;
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  min-height: 400px;
 
   table {
     width: 65%;
@@ -105,11 +110,6 @@ h2 {
       color: #e61610;
     }
   }
-}
-
-#cart-link {
-  text-decoration: underline;
-  color: #e61610;
 }
 
 

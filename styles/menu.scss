@@ -13,7 +13,7 @@ h2 {
     font-size: 24px;
   }
 
-  a.order-button {
+  .order-button {
     display: inline-block;
     text-decoration: none;
     background-color: black;
@@ -27,7 +27,7 @@ h2 {
     font-weight: 700;
   }
 
-  a.order-button:hover {
+  .order-button:hover {
     background-color: #c4d0dd;
     color: #e61610;
     border-color: black;
@@ -73,7 +73,7 @@ h2 {
         width: 75px;
       }
 
-      btn {
+      .add-to-cart {
         background-color: black;
         color: white;
         display: inline-block;
@@ -86,7 +86,7 @@ h2 {
         margin: 20px 0px 15px 53px;
       }
 
-      btn:hover {
+      .add-to-cart:hover {
         background-color: #c4d0dd;
         color: black;
       }
@@ -94,8 +94,6 @@ h2 {
   }
 }
 
-#menu-link {
-  text-decoration: underline;
-  color: #e61610;
+#menu section .added {
+  border-color: #4BB543;
 }
-

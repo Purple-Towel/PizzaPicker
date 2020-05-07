@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
     <link rel="stylesheet" href="/styles/menu.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
@@ -22,10 +23,12 @@
     <h2>Order with us</h2>
 
     <main id="menu">
-      <h3>DISHES</h3>
+
+      <h3>PIZZAS</h3>
       <section class="pizza">
-        <!-- APPEND DISHES -->
+        <!-- APPEND PIZZA DISHES -->
         <% for (let item of menuItems) { %>
+          <% if (item.is_pizza) { %>
             <article class="dish">
               <div>
                 <img class="dish-image" src="<%= item.image_url %>">
@@ -34,15 +37,60 @@
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
                 <form class="add-pizza">
+
+                  <input type='hidden' name='pizzaID' value="<%= item.id %>" >
+                  <input type='hidden' name='pizzaName' value="<%= item.name %>" >
+                  <input type='hidden' name='pizzaPrice' value="<%= item.base_price %>" >
+
+                  <label for="pizzaSize">Size</label>
+                  <select name="pizzaSize">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                  </select>
+                  <label for="pizza-crust">Crust</label>
+                  <select name="pizzaCrust">
+                    <option value="thin">Thin</option>
+                    <option value="regular">Regular</option>
+                    <option value="stuffed">Stuffed</option>
+                  </select>
                   <button class="add-to-cart" type="submit">ADD TO CART</button>
                 </form>
               </div>
             </article>
+          <% } %>
         <% } %>
       </section>
 
-      <a class="order-button" href="/cart">GO TO CART</a>
+      <h3>SIDES</h3>
+      <section class="sides">
+        <!-- APPEND SIDE DISHES -->
+        <% for (let item of menuItems) { %>
+          <% if (!item.is_pizza) { %>
+            <article class="dish">
+              <div>
+                <img class="dish-image" src="<%= item.image_url %>">
+              </div>
+              <div class="dish-info">
+                <h4><%= item.name %></h4>
+                <p><%= item.description %></p>
+                <form class="add-side">
+                  <input type='hidden' name='sideID' value="<%= item.id %>" >
+                  <input type='hidden' name='sideName' value="<%= item.name %>" >
+                  <input type='hidden' name='sidePrice' value="<%= item.base_price %>" >
+
+                  <button class="add-to-cart" type="submit">ADD TO CART</button>
+                </form>
+              </div>
+            </article>
+          <% } %>
+        <% } %>
+      </section>
+
+      <button class="order-button">GO TO CART</button>
     </main>
+
+    <%- include('partials/_cart') %>
 
     <%- include('partials/_footer') %>
 
@@ -50,8 +98,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/order.js"></script>
     <script type="text/javascript" src="/scripts/login-logout.js"></script>
     <script type="text/javascript" src="/scripts/add-to-cart.js"></script>
+    <script type="text/javascript" src="/scripts/render-cart.js"></script>
+    <script type="text/javascript" src="/scripts/checkout.js"></script>
   </body>
 </html>

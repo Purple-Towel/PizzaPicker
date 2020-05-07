@@ -12,7 +12,6 @@ $('.checkout-button').on('click', function() {
   }
 });
 
-
 $('.checkout-button').on('click', function(event) {
   event.preventDefault();
   if ($('.logout-btn').is(':visible')) {
@@ -26,4 +25,5 @@ $('.checkout-button').on('click', function(event) {
     $.post('/cart/smstoClient', () => {})
   }
 });
+
 
