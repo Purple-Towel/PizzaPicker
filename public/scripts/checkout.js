@@ -15,14 +15,14 @@ $('.checkout-button').on('click', function() {
 $('.checkout-button').on('click', function(event) {
   event.preventDefault();
   if ($('.logout-btn').is(':visible')) {
-    $.post('/cart/smstoRestaurant', {}, () => {})
+    $.post('/cart/smstoRestaurant', () => {})
   }
 });
 
 $('.checkout-button').on('click', function(event) {
-  event.preventDefault();
+  // event.preventDefault();
   if ($('.logout-btn').is(':visible')) {
-    $.post('/cart/smstoClient', {}, () => {})
+    $.post('/cart/smstoClient', () => {})
   }
 });
 
