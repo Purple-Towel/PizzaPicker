@@ -33,7 +33,9 @@
               <div class="dish-info">
                 <h4><%= item.name %></h4>
                 <p><%= item.description %></p>
-                <form class="add-pizza">
+                <form class="add-dish">
+                  <input type='hidden' name='dishID' value="<%= item.id %>" >
+                  <input type='hidden' name='dishName' value="<%= item.name %>" >
                   <button class="add-to-cart" type="submit">ADD TO CART</button>
                 </form>
               </div>
@@ -50,7 +52,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/cart.js"></script>
     <script type="text/javascript" src="/scripts/login-logout.js"></script>
     <script type="text/javascript" src="/scripts/add-to-cart.js"></script>
   </body>

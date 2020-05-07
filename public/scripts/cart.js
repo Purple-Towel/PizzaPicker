@@ -6,7 +6,8 @@ let menuItemsInMemory = [{name: 'pizza with cheese', price: 1099}, {name: 'pizza
 // add item is working fine
 
 const addItemToOrder = function(menuItem, quantity) {
-  orderInMemory.push([menuItemsInMemory[menuItem], quantity])
+  orderInMemory.push([menuItemsInMemory[menuItem], quantity]);
+  console.log(orderInMemory)
 };
 
 // edit quantity is working fine
