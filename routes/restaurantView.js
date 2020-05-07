@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const { smstoClient } = require('../twilio/smstoClient')
+const { smstoClient, smstoclientInitial } = require('../twilio/smstoClient')
 
 
 module.exports = (db) => {
@@ -9,8 +9,13 @@ module.exports = (db) => {
     res.render('restaurantView', { userID });
   });
 
+
   router.post('/smstoClient', (req,res) => {
-    setTimeout(() =>smstoClient(), 10000)
+    setTimeout(() =>smstoClient(), (req.body.time)*1000)
+    smstoclientInitial(req.body.time)
   });
   return router;
 };
+
+//time delay input is in seconds
+//*60000 for minutes

@@ -18,5 +18,16 @@ function smstoClient() {
   })
 }
 
+function smstoclientInitial(data) {
+  return client.messages
+    .create({
+    body: `Hi ${calvin},
+    Thanks for ordering with Pizza Planet.
+    We have recieved your order and it will be completed in ${data} minutes.`,
+    from: fromPhone,
+    to: calvin
+  })
+}
 
-module.exports = { smstoClient };
+
+module.exports = { smstoClient, smstoclientInitial };

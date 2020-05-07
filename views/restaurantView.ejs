@@ -35,19 +35,19 @@
         </thead>
         <tbody>
           <tr>
-            <td>Papa-Ronni Pizza</td>
+            <td>Papa-Ronni Pizza (small, thin)</td>
             <td>$10</td>
             <td><input type="number" value="2" min="1"></td>
             <td>$20</td>
           </tr>
           <tr>
-            <td>Pizza Cube©</td>
+            <td>Pizza Cube© (large, stuffed)</td>
             <td>$1000</td>
             <td><input type="number" value="1" min="1"></td>
             <td>$1000</td>
           </tr>
           <tr>
-            <td>JUST CHEESE</td>
+            <td>JUST CHEESE (medium, regular)</td>
             <td>$6</td>
             <td><input type="number" value="1" min="1"></td>
             <td>$6</td>
@@ -70,13 +70,13 @@
           </section>
           <div class="orderDuration">
             <p>Order Duration</p>
-            <form action="/restaurantView" Method='POST'>
+            <form id="place-button" action="/restaurantView" Method='POST'>
               <input type="text" id="orderTime" name="orderTime" placeholder="0000 (Minutes)">
+              <button class="confirm-button" type="submit">CONFIRM ORDER</button>
+              <div class="confirm-msg"></div>
             </form>
           </div>
         </div>
-        <btn class="confirm-button" type="submit">CONFIRM ORDER</btn>
-        <div class="confirm-msg"></div>
       </aside>
 
     </main>
@@ -86,7 +86,6 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/login-logout.js"></script>
     <script type="text/javascript" src="/scripts/confirm-order.js"></script>
   </body>
