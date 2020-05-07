@@ -1,91 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Pizza Planet - Cart</title>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Pizza Planet - Cart</title>
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+      <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
+      <!-- FONTS -->
+      <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-  </head>
+      <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    </head>
 
-  <body>
+    <body>
 
-    <%- include('partials/_header') %>
+      <%- include('partials/_header') %>
 
-    <h2>Your Cart</h2>
+      <h2>Your Cart</h2>
 
-    <main id="cart">
+      <main id="cart">
 
-      <table border=1 frame=void rules=rows>
-        <thead>
-          <tr>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <!-- <th>REMOVE</th> -->
-            <th>TOTAL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Papa-Ronni Pizza</td>
-            <td>$10</td>
-            <td><input type="number" value="2" min="1"></td>
-            <td>$20</td>
-          </tr>
-          <tr>
-            <td>Pizza Cube©</td>
-            <td>$1000</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>$1000</td>
-          </tr>
-          <tr>
-            <td>JUST CHEESE</td>
-            <td>$6</td>
-            <td><input type="number" value="1" min="1"></td>
-            <td>$6</td>
-          </tr>
-        </tbody>
-      </table>
+        <table border=1 frame=void rules=rows>
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <!-- <th>REMOVE</th> -->
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Papa-Ronni Pizza</td>
+              <td>$10</td>
+              <td><input type="number" value="2" min="1"></td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Pizza Cube©</td>
+              <td>$1000</td>
+              <td><input type="number" value="1" min="1"></td>
+              <td>$1000</td>
+            </tr>
+            <tr>
+              <td>JUST CHEESE</td>
+              <td>$6</td>
+              <td><input type="number" value="1" min="1"></td>
+              <td>$6</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <aside>
-        <div class="order-sum">
-          <h4>Order Summary</h4>
-          <section class="subtotal">
-            <div class="left">
-              <p>Subtotal</p>
-              <p>Delivery</p>
+        <aside>
+          <div class="order-sum">
+            <h4>Order Summary</h4>
+            <section class="subtotal">
+              <div class="left">
+                <p>Subtotal</p>
+                <p>Delivery</p>
+              </div>
+              <div class="right">
+                <p>$65</p>
+                <p>$4.99</p>
+              </div>
+            </section>
+            <div class="total">
+              <p>Total</p>
+              <p>$69.99</p>
             </div>
-            <div class="right">
-              <p>$65</p>
-              <p>$4.99</p>
-            </div>
-          </section>
-          <div class="total">
-            <p>Total</p>
-            <p>$69.99</p>
           </div>
-        </div>
-        <btn class="checkout-button" type="submit">PLACE ORDER</btn>
-        <div class="checkout-msg"></div>
-      </aside>
+          <btn class="checkout-button" type="submit">PLACE ORDER</btn>
+          <div class="checkout-msg"></div>
+        </aside>
 
-    </main>
+      </main>
 
-    <%- include('partials/_footer') %>
+      <%- include('partials/_footer') %>
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/login-logout.js"></script>
-    <script type="text/javascript" src="/scripts/checkout.js"></script>
-  </body>
-</html>
+      <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- App JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      <script type="text/javascript" src="/scripts/login-logout.js"></script>
+      <script type="text/javascript" src="/scripts/checkout.js"></script>
+    </body>
+  </html>
