@@ -7,5 +7,10 @@ module.exports = (db) => {
     const userID = req.session.user_id;
     res.render('restaurantView', { userID });
   });
+
+  router.post('/smstoClient', (req,res) => {
+    setTimeout(() =>smstoClient(), 10000)
+  });
+  
   return router;
 }

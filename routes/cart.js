@@ -26,12 +26,6 @@ module.exports = (db) => {
     smstoRestaurant()
   });
 
-  router.post('/smstoClient', (req,res) => {
-    setTimeout(() =>smstoClient(), 10000)
-    // const userID = req.session.user_id;
-    // res.redirect('index', { userID });
-  });
-
   return router;
 };
 
