@@ -4,6 +4,13 @@ $('.checkout-button').on('click', function() {
       .text('Your order has been placed. Thank you for choosing Pizza Planet!')
       .addClass('checkout-success')
       .slideDown();
+      console.log(orderInMemory);
+      $.ajax({
+        type: "POST",
+        data: { orderInMemory },
+        url: "/cart"
+      })
+
   } else {
     $('.checkout-msg')
       .text('Please login to process order.')
