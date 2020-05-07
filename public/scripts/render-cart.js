@@ -6,7 +6,13 @@ const renderCart = function (order) {
   for (let dish of order) {
     const $orderLine = $('<tr>');
 
-    const $product = $('<td>').text(dish[0].name);
+    let $product;
+    if (dish[0].ID < 7) {
+      $product = $('<td>').text(`${dish[0].name} - ${dish[0].options.size}, ${dish[0].options.crust}`);
+    } else {
+      $product = $('<td>').text(dish[0].name);
+    }
+
     const $price = $('<td>').text(`$${dish[0].price}`);
     const $quantity = $('<td>').text(dish[1]);
     const $total = $('<td>').text(`$${(dish[0].price * dish[1])}`);
@@ -29,3 +35,5 @@ $('.order-button').on('click', () => {
   $('.cart-slidedown').slideDown();
   renderCart(orderInMemory);
 });
+
+

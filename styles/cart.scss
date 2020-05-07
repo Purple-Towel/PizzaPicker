@@ -14,7 +14,7 @@
   padding: 0px 72px;
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  min-height: 400px;
 
   table {
     width: 65%;
@@ -111,3 +111,6 @@
     }
   }
 }
+
+
+
