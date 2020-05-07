@@ -1,6 +1,5 @@
 const express = require('express');
 const router  = express.Router();
-const { smstoClient } = require('../twilio/smstoClient')
 const { smstoRestaurant } = require('../twilio/smstoRestaurant')
 
 
@@ -20,10 +19,6 @@ module.exports = (db) => {
       `, [line[0].ID, line[1]])
       .then(res => console.log(res.rows));
     }
-  });
-
-  router.post('/smstoRestaurant', (req, res) => {
-    smstoRestaurant()
   });
 
   return router;
