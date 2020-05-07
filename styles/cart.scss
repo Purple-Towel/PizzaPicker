@@ -1,8 +1,13 @@
-h2 {
+.cart-title {
   font-family: 'Aclonica', sans-serif;
   padding: 40px 72px;
   color: #e61610;
   font-size: 30px;
+  display: none;
+}
+
+.cart-slidedown {
+  display: none;
 }
 
 #cart {
@@ -106,11 +111,3 @@ h2 {
     }
   }
 }
-
-#cart-link {
-  text-decoration: underline;
-  color: #e61610;
-}
-
-
-
