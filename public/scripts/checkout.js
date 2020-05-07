@@ -12,7 +12,6 @@ $('.checkout-button').on('click', function() {
   }
 });
 
-
 $('.checkout-button').on('click', function(event) {
   event.preventDefault();
   if ($('.logout-btn').is(':visible')) {

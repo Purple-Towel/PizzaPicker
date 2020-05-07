@@ -21,3 +21,11 @@ const editItemQuantity = function(arrayIndex, quantity) {
 const removeItem = function(arrayIndex) {
   orderInMemory.splice(arrayIndex, 1);
 };
+
+const sumOrderPrice= function(order) {
+  let total = 0;
+  for (let item of order) {
+    total += Number(item[0].price);
+  }
+  return total;
+}
