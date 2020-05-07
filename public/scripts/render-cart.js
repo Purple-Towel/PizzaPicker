@@ -8,7 +8,7 @@ const renderCart = function (order) {
 
     let $product;
     if (dish[0].ID < 7) {
-      $product = $('<td>').text(`${dish[0].name} - ${dish[0].options.size}, ${dish[0].options.crust}`);
+      $product = $('<td>').text(`${dish[0].name} (${dish[0].options.size}, ${dish[0].options.crust})`);
     } else {
       $product = $('<td>').text(dish[0].name);
     }
@@ -31,9 +31,10 @@ const renderCart = function (order) {
 }
 
 $('.order-button').on('click', () => {
-  $('.cart-title').show();
-  $('.cart-slidedown').slideDown();
   renderCart(orderInMemory);
+  $('.cart-title').show();
+  $('.cart-slidedown').show();
+  window.scrollTo(0, 2650);
 });
 
 
