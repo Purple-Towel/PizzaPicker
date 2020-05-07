@@ -12,6 +12,5 @@ module.exports = (db) => {
   router.post('/smstoClient', (req,res) => {
     setTimeout(() =>smstoClient(), 10000)
   });
-
   return router;
 };
