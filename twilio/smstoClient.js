@@ -10,7 +10,7 @@ const client = require('twilio')(accountSid, authToken);
 function smstoClient() {
   return client.messages
     .create({
-    body: `Hi ${calvin},
+    body: `Hi Papa John,
     Thanks for ordering with Pizza Planet.
     Your order is ready for pickup`,
     from: fromPhone,
@@ -21,7 +21,7 @@ function smstoClient() {
 function smstoclientInitial(data) {
   return client.messages
     .create({
-    body: `Hi ${calvin},
+    body: `Hi Papa John ,
     Thanks for ordering with Pizza Planet.
     We have recieved your order and it will be completed in ${data} minutes.`,
     from: fromPhone,
