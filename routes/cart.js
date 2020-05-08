@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const { smstoRestaurant } = require('../twilio/smstoRestaurant')
+const { smstoRestaurant } = require('../twilio/smstoRestaurant');
 
 
 module.exports = (db) => {
@@ -10,7 +10,7 @@ module.exports = (db) => {
   });
 
   router.post('/smstoRestaurant', (req, res) => {
-    smstoRestaurant()
+    smstoRestaurant();
   });
 
   router.post("/", (req, res) => {
@@ -21,7 +21,7 @@ module.exports = (db) => {
         INSERT INTO order_lines (order_id, dish_id, quantity)
         VALUES (1, $1, $2);
       `, [line[0].ID, line[1]])
-      .then(res => console.log(res.rows));
+        .then(res => console.log(res.rows));
     }
   });
 

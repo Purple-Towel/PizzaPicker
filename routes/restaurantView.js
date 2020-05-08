@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const { smstoClient, smstoclientInitial } = require('../twilio/smstoClient')
+const { smstoClient, smstoclientInitial } = require('../twilio/smstoClient');
 
 
 module.exports = (db) => {
@@ -11,8 +11,8 @@ module.exports = (db) => {
 
 
   router.post('/smstoClient', (req,res) => {
-    setTimeout(() =>smstoClient(), (req.body.time)*1000)
-    smstoclientInitial(req.body.time)
+    setTimeout(() =>smstoClient(), (req.body.time) * 1000);
+    smstoclientInitial(req.body.time);
   });
   return router;
 };
