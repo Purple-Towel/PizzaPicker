@@ -16,10 +16,10 @@ $('.add-pizza').on('submit', function(event) {
     const pizzaCrust = selectPizzaCrust.options[selectPizzaCrust.selectedIndex].value;
 
     switch (pizzaSize) {
-      case 'm':
+      case 'medium':
         pizzaPrice += 400;
         break;
-      case 'l':
+      case 'large':
         pizzaPrice += 1000;
         break;
     }

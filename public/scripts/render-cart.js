@@ -23,10 +23,10 @@ const renderCart = function (order) {
 
   const subtotal = sumOrderPrice(order);
   const $subtotal = $('<p>').text(`$${subtotal}`);
-  const $delivery = $('<p>').text('$4.99');
+  const $delivery = $('<p>').text('$0');
   $('.right').append($subtotal).append($delivery);
 
-  const $total = $('<p>').text(`$${(subtotal + 4.99).toFixed(2)}`);
+  const $total = $('<p>').text(`$${(subtotal).toFixed(2)}`);
   $('.total').append('<p>Total<p>').append($total);
 }
 
