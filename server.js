@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
-var cookieSession = require('cookie-session')
+const cookieSession = require('cookie-session');
 
 
 // PG database client/connection setup
@@ -63,16 +63,16 @@ app.get("/", (req, res) => {
   const userID = req.session.user_id;
   let query = `SELECT name FROM users
     WHERE id = 1`;
-    db.query(query)
-      .then(data => {
-        const user = data.rows[0];
-        res.render("index", { userID, user });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
+  db.query(query)
+    .then(data => {
+      const user = data.rows[0];
+      res.render("index", { userID, user });
+    })
+    .catch(err => {
+      res
+        .status(500)
+        .json({ error: err.message });
+    });
 });
 
 app.listen(PORT, () => {
