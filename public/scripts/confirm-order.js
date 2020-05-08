@@ -5,12 +5,12 @@
 
 $('#place-button').on('submit', function(event) {
   event.preventDefault();
-  const time = this.elements.orderTime.value
-    $.post('/restaurantView/smstoClient', {time:time}, () => {})
+  const time = this.elements.orderTime.value;
+  $.post('/restaurantView/smstoClient', {time:time}, () => {});
 });
 
 $('.confirm-button').on('click', function(event) {
   $('.confirm-msg')
-  .text('Order has been confirmed. Text has been sent to client!')
-  .slideDown();
+    .text('Order has been confirmed. Text has been sent to client!')
+    .slideDown();
 });

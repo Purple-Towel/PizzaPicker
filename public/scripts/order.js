@@ -7,7 +7,7 @@ let orderInMemory = [];
 
 const addItemToOrder = function(menuItem, quantity) {
   orderInMemory.push([menuItem, quantity]);
-  console.log(orderInMemory)
+  console.log(orderInMemory);
 };
 
 // edit quantity is working fine
@@ -23,10 +23,10 @@ const removeItem = function(arrayIndex) {
 };
 
 
-const sumOrderPrice= function(order) {
+const sumOrderPrice = function(order) {
   let total = 0;
   for (let item of order) {
     total += Number(item[0].price);
   }
   return total;
-}
+};

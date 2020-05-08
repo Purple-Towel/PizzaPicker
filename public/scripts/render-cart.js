@@ -1,4 +1,4 @@
-const renderCart = function (order) {
+const renderCart = function(order) {
   $('.right').empty();
   $('.total').empty();
   $('#cart-info').empty();
@@ -28,7 +28,7 @@ const renderCart = function (order) {
 
   const $total = $('<p>').text(`$${(subtotal + 4.99).toFixed(2)}`);
   $('.total').append('<p>Total<p>').append($total);
-}
+};
 
 $('.order-button').on('click', () => {
   renderCart(orderInMemory);
