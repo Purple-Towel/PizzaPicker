@@ -5,7 +5,7 @@
 
 $('#place-button').on('submit', function(event) {
   event.preventDefault();
-  const time = this.elements.orderTime.value
+  const time = this.elements.orderTime.value;
     $.post('/restaurantView/smstoClient', {time:time}, () => {})
 });
 

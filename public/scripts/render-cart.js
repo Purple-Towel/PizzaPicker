@@ -26,7 +26,7 @@ const renderCart = function (order) {
   const $delivery = $('<p>').text('$4.99');
   $('.right').append($subtotal).append($delivery);
 
-  const $total = $('<p>').text(`$${(subtotal + 4.99).toFixed(2)}`);
+  const $total = $('<p>').text(`$${(subtotal + 0).toFixed(2)}`);
   $('.total').append('<p>Total<p>').append($total);
 }
 
@@ -36,5 +36,3 @@ $('.order-button').on('click', () => {
   $('.cart-slidedown').show();
   window.scrollTo(0, 2650);
 });
-
-
